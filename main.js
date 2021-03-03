@@ -9,7 +9,7 @@ const fetchMovie = (e) => {
     const plotUrl = plot ? '&plot=full' : "";
     const movieTitle = document.querySelector('[name = "title"]').value;
 
-    fetch(`${apiUrl}t=${movieTitle}&${apiKey}${plotUrl}&page=1`)
+    fetch(`${apiUrl}t=${movieTitle}&${apiKey}${plotUrl}`)
         .then(response => {
             if (response.status !== 200) {
                 throw Error('This is not status 200');
