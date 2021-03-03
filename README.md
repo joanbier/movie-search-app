@@ -1,6 +1,6 @@
 # movie-search-app
 
-The code presents a simple movie search application. The application sends a request to the OMDb API server (http://www.omdbapi.com).  
+The code presents a simple movie search application. The application sends a request to the OMDb API server (http://www.omdbapi.com). The screenshots of the application are available in the files.
 
 ## Technologies
 * HTML
