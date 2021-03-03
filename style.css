@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(36, 35, 35);
+  color: whitesmoke;
+  overflow-x: hidden;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 200;
+}
+
+header {
+  display: flex;
+  background-color: rgba(255, 217, 0, 0.932);
+  margin-bottom: 15px;
+  height: 90px;
+}
+
+h1 {
+  color: black;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 90px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.search-input,
+.search-button {
+  padding: 10px;
+  margin: 10px;
+}
+
+.search-plot {
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+
+.search-button {
+  background-color: rgb(65, 193, 225);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  outline: none;
+}
+
+.search-button:hover {
+  cursor: pointer;
+  box-shadow: 1px 0px 10px 0px rgb(65, 193, 225);
+  color: whitesmoke;
+}
+
+.movie-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 60px;
+}
+
+.movie-title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.poster-img {
+  max-width: 100%;
+  margin: 15px;
+  -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.results-info {
+  border: cadetblue 1px solid;
+  padding: 20px;
+  box-shadow: 1px 0px 10px 0px rgb(65, 193, 225);
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+}
+
+.results-info > * {
+  margin: 5px;
+}
+
+.not-found {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    width: calc(100vw - 160px);
+    margin: 0 auto;
+  }
+
+  form {
+    flex-direction: row;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  .search-input,
+  .search-button {
+    padding: 10px;
+    margin: 0;
+    border: none;
+    font-size: 1rem;
+  }
+
+  .search-input {
+    width: 60%;
+  }
+
+  .search-button {
+    border-radius: 0;
+    margin-left: 1px;
+  }
+
+  .search-plot {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .movie-result {
+    display: block;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.205);
+    margin-top: 20px;
+    /* box-shadow: 1px 0px 10px 0px rgb(65, 193, 225); */
+    border-top: 1px groove rgb(65, 193, 225);
+  }
+
+  .movie-title {
+    text-align: center;
+  }
+
+  .results-info {
+    position: absolute;
+    top: 87px;
+    left: 350px;
+    width: 58%;
+  }
+
+  .filmtape {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100vh;
+    z-index: 1;
+    background-image: url("./assets/filmtape.png");
+    filter: opacity(85%) sepia(100%);
+  }
+
+  .filmtape.right {
+    left: calc(100% - 80px);
+  }
+}
