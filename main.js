@@ -1,5 +1,5 @@
 const apiUrl = 'http://www.omdbapi.com/?';
-const apiKey = 'apikey=42a0095b';
+const apiKey = 'apikey=4af8ab24';
 
 
 const fetchMovie = (e) => {
